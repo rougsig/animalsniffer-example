@@ -1,0 +1,22 @@
+plugins {
+    id 'groovy'
+    id 'ru.vyarus.animalsniffer' version '1.5.4'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.codehaus.groovy:groovy-all:3.0.9'
+    signature 'org.codehaus.mojo.signature:java18:1.0@signature'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(11)
+    }
+}
